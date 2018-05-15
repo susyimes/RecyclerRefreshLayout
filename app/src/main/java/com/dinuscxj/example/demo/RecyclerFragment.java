@@ -69,7 +69,8 @@ public abstract class RecyclerFragment<MODEL extends CursorModel> extends Fragme
 
     private void initRecyclerRefreshLayout(View view) {
         mRecyclerRefreshLayout = (RecyclerRefreshLayout) view.findViewById(R.id.refresh_layout);
-
+        ViewGroup.LayoutParams layoutParams=new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        mRecyclerRefreshLayout.setRefreshView(new RefreshViewSun(getContext()), layoutParams);
         if (mRecyclerRefreshLayout == null) {
             return;
         }

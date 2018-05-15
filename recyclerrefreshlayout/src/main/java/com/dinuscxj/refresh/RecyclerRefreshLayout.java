@@ -1128,7 +1128,7 @@ public class RecyclerRefreshLayout extends ViewGroup
                 break;
             default:
                 mTarget.offsetTopAndBottom(offsetY);
-                mRefreshView.offsetTopAndBottom(offsetY);
+                mRefreshView.offsetTopAndBottom(offsetY*3/4);
                 mTargetOrRefreshViewOffsetY = mTarget.getTop();
                 break;
         }
